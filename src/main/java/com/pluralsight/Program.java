@@ -8,6 +8,8 @@ public class Program {
         ArrayList<String> inventory = getInventory();
 
         inventory.add("Ergonomic Mouse");
+        inventory.add("Chibi Character Keychain");
+        inventory.remove(2);
 
         System.out.println("Print current number of products: " + inventory.size());
         System.out.println();
@@ -18,7 +20,7 @@ public class Program {
     }
 
     public static ArrayList<String> getInventory(){
-    ArrayList<String> products = new ArrayList<String>();
+    ArrayList<String> products = new ArrayList<>();
 
         products.add("Laptop (MacBook Pro)");
         products.add("Mechanical Keyboard");
