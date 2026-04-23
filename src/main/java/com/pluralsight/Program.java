@@ -5,29 +5,14 @@ import java.util.ArrayList;
 public class Program {
     public static void main(String[] args) {
 
-        ArrayList<String> inventory = getInventory();
+        ArrayList<Product> inventory = Product.getInventory();
 
-        inventory.add("Ergonomic Mouse");
-        inventory.add("Chibi Character Keychain");
-        inventory.remove(2);
+        System.out.println("We carry the following inventory: ");
 
-        System.out.println("Print current number of products: " + inventory.size());
-        System.out.println();
-        for(String product : inventory){
-            System.out.println(product);
+        for (Product p : inventory) {
+            System.out.printf("id: %d %s - Price: $%.2f\n",
+                    p.getId(), p.getName(), p.getPrice());
         }
 
-    }
-
-    public static ArrayList<String> getInventory(){
-    ArrayList<String> products = new ArrayList<>();
-
-        products.add("Laptop (MacBook Pro)");
-        products.add("Mechanical Keyboard");
-        products.add("Ergonomic Office Chair");
-        products.add("27-inch 4K Monitor");
-        products.add("Noise-Canceling Headphones");
-
-        return products;
     }
 }
